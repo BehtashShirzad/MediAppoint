@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MediAppoint.Patient.Application\MediAppoint.Patient.Application.csproj" />
+    <ProjectReference Include="..\MediAppoint.SharedKernel.Presentation\MediAppoint.SharedKernel.Presentation.csproj" />
+  </ItemGroup>
+
+</Project>

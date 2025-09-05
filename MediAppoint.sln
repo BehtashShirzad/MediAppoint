@@ -1,0 +1,82 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36414.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediAppoint.Patient.Host", "MediAppoint.Patient.Host\MediAppoint.Patient.Host.csproj", "{EBFF8598-4768-4B01-9482-235C0A6CEAFD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Patient", "Patient", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediAppoint.Patient.Domain", "MediAppoint.Patient.Domain\MediAppoint.Patient.Domain.csproj", "{4B70B0DA-15AF-4F95-B3F4-035210F48A3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediAppoint.SharedKernel.Domain", "MediAppoint.SharedKernel.Domain\MediAppoint.SharedKernel.Domain.csproj", "{83153CA1-E2E1-4966-975C-0CC6BDE9B972}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediAppoint.Patient.Application", "MediAppoint.Patient.Application\MediAppoint.Patient.Application.csproj", "{67AE319E-0152-4840-A761-6321094898C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediAppoint.SharedKernel.Infrastructure", "MediAppoint.SharedKernel.Infrastructure\MediAppoint.SharedKernel.Infrastructure.csproj", "{2D21D423-43FA-419E-A29D-BD0B2F666FAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediAppoint.Patient.Infrastructure", "MediAppoint.Patient.Infrastructure\MediAppoint.Patient.Infrastructure.csproj", "{50839154-4C0C-453E-AC7C-38197C5853D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediAppoint.Patient.Presentation", "MediAppoint.Patient.Presentation\MediAppoint.Patient.Presentation.csproj", "{131E3D18-5DA0-40D3-905B-A6AD11C46F83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediAppoint.SharedKernel.Presentation", "MediAppoint.SharedKernel.Presentation\MediAppoint.SharedKernel.Presentation.csproj", "{D99D9273-A95D-49BF-8F8F-4434DD3569E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediAppoint.SharedKernel.Application", "MediAppoint.SharedKernel.Application\MediAppoint.SharedKernel.Application.csproj", "{3850EE69-F189-0D87-B3D0-12E917EB3953}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EBFF8598-4768-4B01-9482-235C0A6CEAFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBFF8598-4768-4B01-9482-235C0A6CEAFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBFF8598-4768-4B01-9482-235C0A6CEAFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBFF8598-4768-4B01-9482-235C0A6CEAFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B70B0DA-15AF-4F95-B3F4-035210F48A3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B70B0DA-15AF-4F95-B3F4-035210F48A3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B70B0DA-15AF-4F95-B3F4-035210F48A3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B70B0DA-15AF-4F95-B3F4-035210F48A3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83153CA1-E2E1-4966-975C-0CC6BDE9B972}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83153CA1-E2E1-4966-975C-0CC6BDE9B972}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83153CA1-E2E1-4966-975C-0CC6BDE9B972}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83153CA1-E2E1-4966-975C-0CC6BDE9B972}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67AE319E-0152-4840-A761-6321094898C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67AE319E-0152-4840-A761-6321094898C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67AE319E-0152-4840-A761-6321094898C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67AE319E-0152-4840-A761-6321094898C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D21D423-43FA-419E-A29D-BD0B2F666FAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D21D423-43FA-419E-A29D-BD0B2F666FAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D21D423-43FA-419E-A29D-BD0B2F666FAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D21D423-43FA-419E-A29D-BD0B2F666FAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50839154-4C0C-453E-AC7C-38197C5853D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50839154-4C0C-453E-AC7C-38197C5853D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50839154-4C0C-453E-AC7C-38197C5853D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50839154-4C0C-453E-AC7C-38197C5853D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{131E3D18-5DA0-40D3-905B-A6AD11C46F83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{131E3D18-5DA0-40D3-905B-A6AD11C46F83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{131E3D18-5DA0-40D3-905B-A6AD11C46F83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{131E3D18-5DA0-40D3-905B-A6AD11C46F83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D99D9273-A95D-49BF-8F8F-4434DD3569E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D99D9273-A95D-49BF-8F8F-4434DD3569E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D99D9273-A95D-49BF-8F8F-4434DD3569E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D99D9273-A95D-49BF-8F8F-4434DD3569E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3850EE69-F189-0D87-B3D0-12E917EB3953}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3850EE69-F189-0D87-B3D0-12E917EB3953}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3850EE69-F189-0D87-B3D0-12E917EB3953}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3850EE69-F189-0D87-B3D0-12E917EB3953}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EBFF8598-4768-4B01-9482-235C0A6CEAFD} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{4B70B0DA-15AF-4F95-B3F4-035210F48A3C} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{67AE319E-0152-4840-A761-6321094898C8} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{50839154-4C0C-453E-AC7C-38197C5853D1} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{131E3D18-5DA0-40D3-905B-A6AD11C46F83} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {83B53E7C-A7EE-4ABB-9D43-D49341F9DFD3}
+	EndGlobalSection
+EndGlobal
