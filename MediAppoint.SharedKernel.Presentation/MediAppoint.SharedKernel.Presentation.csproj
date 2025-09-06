@@ -7,6 +7,6 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="FastEndpoints" Version="7.0.1" />
-    <PackageReference Include="Mapster" Version="7.4.0" />
+   
   </ItemGroup>
 </Project>

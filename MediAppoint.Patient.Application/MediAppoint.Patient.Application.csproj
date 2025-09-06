@@ -5,16 +5,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
-
-  <ItemGroup>
-    <Folder Include="EventHandlers\" />
-    
-  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MediAppoint.Patient.Domain\MediAppoint.Patient.Domain.csproj" />
-    <ProjectReference Include="..\MediAppoint.Patient.Infrastructure\MediAppoint.Patient.Infrastructure.csproj" />
-    <ProjectReference Include="..\MediAppoint.SharedKernel.Application\MediAppoint.SharedKernel.Application.csproj" />
+    
+    <ProjectReference Include="..\SharedKernel\SharedKernel.csproj" />
   </ItemGroup>
 
 </Project>

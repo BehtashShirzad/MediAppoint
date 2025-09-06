@@ -1,5 +1,5 @@
 ﻿using Ardalis.GuardClauses;
-using MediAppoint.SharedKernel.Domain;
+using SharedKernel.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;

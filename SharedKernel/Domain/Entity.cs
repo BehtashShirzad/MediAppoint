@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MediAppoint.SharedKernel.Domain
+namespace SharedKernel.Domain
 {
     
     public abstract class EntityBase

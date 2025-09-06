@@ -8,7 +8,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MediAppoint.Patient.Application\MediAppoint.Patient.Application.csproj" />
-    <ProjectReference Include="..\MediAppoint.SharedKernel.Presentation\MediAppoint.SharedKernel.Presentation.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FastEndpoints" Version="7.0.1" />
   </ItemGroup>
 
 </Project>

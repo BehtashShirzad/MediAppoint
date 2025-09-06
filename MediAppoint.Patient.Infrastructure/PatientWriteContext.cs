@@ -1,5 +1,7 @@
 ﻿using MediAppoint.Patient.Infrastructure.Configuration;
+ 
 using Microsoft.EntityFrameworkCore;
+using SharedKernel.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,10 +13,13 @@ namespace MediAppoint.Patient.Infrastructure
 {
     public class PatientWriteContext:DbContext
     {
-        public PatientWriteContext(DbContextOptions<PatientWriteContext> options)
+        readonly IDomainEventsDispatcher domainEventsDispatcher;
+        public PatientWriteContext(DbContextOptions<PatientWriteContext> options,
+    IDomainEventsDispatcher DomainEventsDispatcher)
         : base(options)
         {
             ChangeTracker.LazyLoadingEnabled = false;
+            domainEventsDispatcher = DomainEventsDispatcher;
         }
 
 
@@ -24,12 +29,31 @@ namespace MediAppoint.Patient.Infrastructure
 
         }
 
-        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+        
+        public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
-            // Raise Events
-            return base.SaveChangesAsync(cancellationToken);
+            
+            var res =    await base.SaveChangesAsync(cancellationToken);
+            await PublishDomainEventsAsync();
+            return res;
         }
         public DbSet<Patient.Domain.Core.Patient> Patients => Set<Domain.Core.Patient>();
-       
+        private async Task PublishDomainEventsAsync()
+        {
+            var domainEntities = ChangeTracker
+        .Entries()
+        .Select(e => e.Entity)
+        .OfType<IAggregateRoot>()
+        .Where(e => e.DomainEvents.Any())
+        .ToList();
+
+            var domainEvents = domainEntities
+                .SelectMany(e => e.DomainEvents)
+                .ToList();
+
+            domainEntities.ForEach(e => e.ClearEvents());
+
+            await domainEventsDispatcher.DispatchAsync(domainEvents);
+        }
     }
 }

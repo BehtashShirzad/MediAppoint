@@ -1,5 +1,6 @@
-﻿using MediAppoint.SharedKernel.Domain;
+﻿
 using Microsoft.EntityFrameworkCore;
+using SharedKernel.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;

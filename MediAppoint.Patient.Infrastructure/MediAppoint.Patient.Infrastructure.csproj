@@ -8,9 +8,11 @@
 
   <ItemGroup>
   
+     
+    <ProjectReference Include="..\MediAppoint.Patient.Application\MediAppoint.Patient.Application.csproj" />
+  
+     
     <ProjectReference Include="..\MediAppoint.Patient.Domain\MediAppoint.Patient.Domain.csproj" />
-    <ProjectReference Include="..\MediAppoint.SharedKernel.Domain\MediAppoint.SharedKernel.Domain.csproj" />
-    <ProjectReference Include="..\MediAppoint.SharedKernel.Infrastructure\MediAppoint.SharedKernel.Infrastructure.csproj" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.8">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -21,6 +23,11 @@
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.8" />
     <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="9.0.8" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.8" />
+    <PackageReference Include="MassTransit" Version="8.5.2" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="8.5.2" />
+    <PackageReference Include="MassTransit.AspNetCore" Version="7.3.1" />
+    <PackageReference Include="Scrutor" Version="6.0.1" />
+    
   </ItemGroup>
 
 </Project>

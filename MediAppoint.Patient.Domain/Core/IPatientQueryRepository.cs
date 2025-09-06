@@ -1,5 +1,4 @@
 ﻿using MediAppoint.Patient.Domain.ValueObjects;
-
 using SharedKernel.Domain;
 using System;
 using System.Collections.Generic;
@@ -7,8 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MediAppoint.Patient.Domain.Events
+namespace MediAppoint.Patient.Domain.Core
 {
-    public record PatientCreatedDomainEvent(Guid Id) : DomainEvent;
-    
+    public interface IPatientQueryRepository:IRepository<Patient,PatientId>
+    {
+    }
 }

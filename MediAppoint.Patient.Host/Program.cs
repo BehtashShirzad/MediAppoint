@@ -2,7 +2,7 @@ using FastEndpoints;
 using MediAppoint.Patient.Application;
 using MediAppoint.Patient.Infrastructure;
 using MediAppoint.Patient.Presentation;
-using MediAppoint.SharedKernel.Infrastructure;
+using SharedKernel.Infrastructure;
 
 
 var builder = WebApplication.CreateBuilder(args);
