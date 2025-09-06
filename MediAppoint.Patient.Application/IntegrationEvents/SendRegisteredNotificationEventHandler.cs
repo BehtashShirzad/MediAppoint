@@ -6,23 +6,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MediAppoint.Patient.Application.EventHandlers
+namespace MediAppoint.Patient.Application.IntegrationEvents
 {
-    public class PatientCreatedDomainEventHandler : DomainEventHandler<PatientCreatedDomainEvent>
+    public class SendRegisteredNotificationEventHandler : DomainEventHandler<RegisteredNotificationEvent>
     {
         private readonly IEventBus _eventBus;
 
-        public PatientCreatedDomainEventHandler(IEventBus eventBus)
+        public SendRegisteredNotificationEventHandler(IEventBus eventBus)
         {
             _eventBus = eventBus;
         }
-        
 
-        public override async Task Handle(PatientCreatedDomainEvent domainEvent, CancellationToken cancellationToken = default)
+
+        public override async Task Handle(RegisteredNotificationEvent domainEvent, CancellationToken cancellationToken = default)
         {
             await _eventBus.PublishAsync(domainEvent);
         }
     }
-
-   
 }

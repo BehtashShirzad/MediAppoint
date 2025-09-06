@@ -11,9 +11,9 @@ namespace MediAppoint.Patient.Infrastructure
 {
     internal class EventBus (IBus bus): IEventBus
     {
-        public async Task PublishAsync<TEvent>(TEvent @event) where TEvent : class
+        public async Task PublishAsync<TEvent>(TEvent @event, CancellationToken cancellation = default) where TEvent : class
         {
-          await  bus.Publish(@event);
+          await  bus.Publish(@event, cancellation);
         }
     }
 }

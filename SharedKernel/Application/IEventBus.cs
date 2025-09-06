@@ -8,6 +8,6 @@ namespace SharedKernel.Application
 {
     public interface IEventBus
     {
-        Task PublishAsync<TEvent>(TEvent @event) where TEvent : class;
+        Task PublishAsync<TEvent>(TEvent @event,CancellationToken cancellation=default) where TEvent : class;
     }
 }
