@@ -31,7 +31,7 @@ namespace MediAppoint.Patient.Application.Commands.CreatePatient
              item.ZipCode))
          .ToList();
 
-            var patinet =  Domain.Core.Patient.Create(patiendId,request.FullName,request.NationalCode, addresses);
+            var patinet =  Domain.Core.Patient.Create(patiendId, request.UserName, request.FullName,request.NationalCode, addresses);
             await patientRepository.AddAsync(patinet,cancellationToken);
             await unitOfWork.SaveChangesAsync(cancellationToken);
             

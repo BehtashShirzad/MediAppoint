@@ -13,6 +13,7 @@ namespace MediAppoint.Patient.Application
         {
             var assembly = typeof(DependencyInjection).Assembly;
             services.AddMediatR(_ => _.RegisterServicesFromAssembly(assembly));
+           
         }
     }
 }

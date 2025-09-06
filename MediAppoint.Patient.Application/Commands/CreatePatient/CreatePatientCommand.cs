@@ -7,7 +7,7 @@ using CSharpFunctionalExtensions;
 using MediatR;
 namespace MediAppoint.Patient.Application.Commands.CreatePatient
 {
-    public record CreatePatientCommand(string FullName,string NationalCode, List<AddressModel> Addresses) :IRequest<Result<CreatePatientCommandResponse>>;
+    public record CreatePatientCommand(string UserName,string FullName,string NationalCode, List<AddressModel> Addresses) :IRequest<Result<CreatePatientCommandResponse>>;
     public record AddressModel(string Country, string StateCode, string StateName, string City, string Address1, string Address2, string ZipCode);
     
 }
