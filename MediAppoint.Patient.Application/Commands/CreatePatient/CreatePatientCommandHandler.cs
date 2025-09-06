@@ -18,13 +18,18 @@ namespace MediAppoint.Patient.Application.Commands.CreatePatient
         {
 
             var patiendId = new PatientId(IdGenerator.Next());
-            List<Address> addresses = new();
-            
-            foreach (var item in request.Addresses)
-            {
-                addresses.Add(Address.Create(item.Country, State.Create(item.StateCode, item.StateName), item.City, item.Address1, item.Address2, item.ZipCode));
-            }
            
+
+            var addresses = request.Addresses
+         .Select(item => Address.Create(
+             item.Country,
+             State.Create(item.StateCode, item.StateName),
+             item.City,
+             item.Address1,
+             item.Address2,
+             item.ZipCode))
+         .ToList();
+
             var patinet =  Domain.Core.Patient.Create(patiendId,request.FullName,request.NationalCode, addresses);
             await context.AddAsync(patinet);
             await unitOfWork.SaveChangesAsync();
