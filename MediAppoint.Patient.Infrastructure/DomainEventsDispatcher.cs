@@ -2,8 +2,8 @@
 using MediAppoint.Patient.Application;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
-using SharedKernel.Domain;
-using SharedKernel.Infrastructure;
+using SharedKernel.Domain.Contracts;
+using SharedKernel.Infrastructure.Contracts;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;

@@ -1,6 +1,6 @@
 ﻿
 using Microsoft.Extensions.DependencyInjection;
-using SharedKernel.Domain;
+using SharedKernel.Domain.Contracts;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SharedKernel.Infrastructure
+namespace SharedKernel.Infrastructure.Contracts
 {
     public interface IDomainEventsDispatcher
     {

@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SharedKernel.Domain
+namespace SharedKernel.Domain.Contracts
 {
     public interface IRepository<TEntity, TId>
         where TEntity : IEntity<TId>

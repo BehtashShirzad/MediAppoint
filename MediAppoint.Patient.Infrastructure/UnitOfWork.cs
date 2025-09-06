@@ -1,6 +1,6 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
-using SharedKernel.Domain;
+using SharedKernel.Domain.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
