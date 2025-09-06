@@ -31,9 +31,9 @@ namespace MediAppoint.Patient.Application.Commands.CreatePatient
          .ToList();
 
             var patinet =  Domain.Core.Patient.Create(patiendId,request.FullName,request.NationalCode, addresses);
-            await context.AddAsync(patinet);
-            await unitOfWork.SaveChangesAsync();
-            //Store In db
+            await context.AddAsync(patinet,cancellationToken);
+            await unitOfWork.SaveChangesAsync(cancellationToken);
+            
             return new CreatePatientCommandResponse(patiendId.Value);
         }
     }
