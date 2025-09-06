@@ -1,5 +1,4 @@
 ﻿
-using MassTransit.Configuration;
 using MediAppoint.Patient.Application;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
@@ -43,52 +42,7 @@ namespace MediAppoint.Patient.Infrastructure
             }
         }
     }
-
-    //public async Task DispatchAsync(IEnumerable<IDomainEvent> domainEvents, CancellationToken cancellationToken = default)
-    //{
-
-    //    var domainEventHandlers = domainEventHandlersFactory.GetHandlers(
-    //        domainEvent.GetType(),
-    //        serviceProvider,
-    //       ApplicationAssemblyReference.Assembly
-
-    //    );
-
-    //    foreach (var domainEventHandler in domainEventHandlers)
-    //    {
-    //        var policy = CreateRetryPolicy(
-    //        options.Value.RetryCount,
-    //            options.Value.SleepDuration
-    //        );
-    //        var result = await policy.ExecuteAndCaptureAsync(
-    //            () => domainEventHandler.Handle(domainEvent, context.CancellationToken)
-    //        );
-
-    //        message.Error = result?.FinalException?.Message;
-    //        message.ProcessedOn = DateTime.UtcNow;
-    //    }
-    //    //foreach (var domainEvent in domainEvents)
-    //    //{
-    //    //    using var scope = _serviceProvider.CreateScope();
-
-    //    //    var domainEventType = domainEvent.GetType();
-    //    //    var handlerType = typeof(IDomainEventHandler<>).MakeGenericType(domainEventType);
-
-    //    //    var handlers = scope.ServiceProvider.GetServices(handlerType);
-
-    //    //    foreach (var handler in handlers)
-    //    //    {
-    //    //        if (handler == null) continue;
-
-    //    //        var method = handlerType.GetMethod("Handle")
-    //    //                     ?? throw new InvalidOperationException($"Handler {handler.GetType().Name} has no Handle method");
-
-    //    //        // Call Handle(domainEvent, cancellationToken)
-    //    //        var task = (Task)method.Invoke(handler, new object[] { domainEvent, cancellationToken })!;
-    //    //        await task;
-    //    //    }
-    //    //}
-    //}
+     
 }
 
 

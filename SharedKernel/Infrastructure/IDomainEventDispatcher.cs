@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MediAppoint.Patient.Infrastructure
+namespace SharedKernel.Infrastructure
 {
     public interface IDomainEventsDispatcher
     {
