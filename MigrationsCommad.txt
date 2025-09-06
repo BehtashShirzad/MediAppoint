@@ -1,0 +1,2 @@
+dotnet ef migrations add AddPatientAddressesTable  --project MediAppoint.Patient.Infrastructure  --startup-project MediAppoint.Patient.Host  -c PatientWriteContext
+dotnet ef database update --project MediAppoint.Patient.Infrastructure  --startup-project MediAppoint.Patient.Host  -c PatientWriteContext

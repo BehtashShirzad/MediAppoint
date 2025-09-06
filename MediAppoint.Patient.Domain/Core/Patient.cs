@@ -15,23 +15,24 @@ namespace MediAppoint.Patient.Domain.Core
     {
         #region Constructor
         protected Patient() { }
-        private  Patient(PatientId patientId,PatientName name, Address address, NationalCode natioanlCode)
+        private  Patient(PatientId patientId,PatientName name, List<Address> address, NationalCode natioanlCode)
         {
             this.Id = patientId;
             this.Name = name;
-            this.Address = address;
+            _addresses = address ?? new List<Address>();
             this.Code = natioanlCode;
         }
         #endregion Constructor
 
         #region Fields
         public   PatientName Name { get;private set; }
-        public   Address Address { get;private set; }
+        private readonly List<Address> _addresses = new();
+        public IReadOnlyCollection<Address> Addresses => _addresses.AsReadOnly();
         public NationalCode Code { get;private set; }
         #endregion Fields
 
         #region Methods
-        public static Patient Create(PatientId patientId,string name,string natioanlCode, Address  address)
+        public static Patient Create(PatientId patientId,string name,string natioanlCode, List<Address>  address)
         {
 
            var patientName = PatientName.Create(name);
@@ -43,10 +44,11 @@ namespace MediAppoint.Patient.Domain.Core
             return patient;
 
         }
-        public  void UpdateAddress(Address address)
+        public  void UpdateAddress(List<Address> address)
         {
             Guard.Against.Null(address,nameof(address));
-            Address = address;
+            _addresses.Clear();          // آدرس‌های قدیمی پاک می‌شن
+            _addresses.AddRange(address);
         }
         #endregion Methods
     }

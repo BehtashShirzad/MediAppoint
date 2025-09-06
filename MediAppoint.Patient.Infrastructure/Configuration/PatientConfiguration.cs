@@ -43,20 +43,27 @@ namespace MediAppoint.Patient.Infrastructure.Configuration
             });
 
             // Address as Owned Value Object
-            builder.OwnsOne(p => p.Address, address =>
+            builder.OwnsMany(p => p.Addresses, address =>
             {
+                address.ToTable("PatientAddresses");  
+
+                address.WithOwner().HasForeignKey("PatientId");
+
                 address.Property(a => a.Country).HasMaxLength(20).IsRequired();
                 address.Property(a => a.City).HasMaxLength(20).IsRequired();
                 address.Property(a => a.Address1).HasMaxLength(100).IsRequired();
                 address.Property(a => a.Address2).HasMaxLength(100);
                 address.Property(a => a.ZipCode).HasMaxLength(20).IsRequired();
 
-                // State inside Address as nested Owned Type
                 address.OwnsOne(a => a.State, state =>
                 {
                     state.Property(s => s.Code).HasMaxLength(10).IsRequired();
                     state.Property(s => s.Name).HasMaxLength(20).IsRequired();
                 });
+
+                // Primary Key برای هر آدرس
+                address.Property<Guid>("Id");
+                address.HasKey("Id");
             });
         }
     }
