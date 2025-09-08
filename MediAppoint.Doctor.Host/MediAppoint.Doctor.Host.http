@@ -1,0 +1,6 @@
+@MediAppoint.Doctor.Host_HostAddress = http://localhost:5251
+
+GET {{MediAppoint.Doctor.Host_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
