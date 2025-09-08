@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SharedKernel.Domain
+namespace SharedKernel.Domain.Contracts
 {
-    public interface IIdGenerator< Tid>
+    public interface IDomainEvent
     {
-        public Tid Next();
+        Guid Id { get; }
+        DateTime OccurredOn { get; }
     }
-   
 }

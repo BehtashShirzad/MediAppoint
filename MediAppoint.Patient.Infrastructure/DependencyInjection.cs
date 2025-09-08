@@ -3,15 +3,16 @@ using MediAppoint.Patient.Application;
 using MediAppoint.Patient.Domain;
 using MediAppoint.Patient.Domain.Core;
 using MediAppoint.Patient.Domain.Events;
- 
+
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using SharedKernel.Application;
-using SharedKernel.Domain;
+using SharedKernel.Domain.Contracts;
 using SharedKernel.Infrastructure;
+using SharedKernel.Infrastructure.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;

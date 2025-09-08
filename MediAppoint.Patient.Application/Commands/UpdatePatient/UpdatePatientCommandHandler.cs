@@ -3,7 +3,7 @@ using MediAppoint.Patient.Application.Errors;
 using MediAppoint.Patient.Domain.Core;
 using MediAppoint.Patient.Domain.ValueObjects;
 using MediatR;
-using SharedKernel.Domain;
+using SharedKernel.Domain.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;

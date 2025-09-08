@@ -1,5 +1,5 @@
 ﻿using MediAppoint.Patient.Infrastructure.Configuration;
- 
+
 using Microsoft.EntityFrameworkCore;
 using SharedKernel.Domain;
 using SharedKernel.Infrastructure;
