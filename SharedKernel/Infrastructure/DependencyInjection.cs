@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SharedKernel.Domain.Contracts;
+using SharedKernel.Infrastructure.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;

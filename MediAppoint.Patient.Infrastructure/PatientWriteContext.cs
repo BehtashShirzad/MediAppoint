@@ -2,7 +2,9 @@
 
 using Microsoft.EntityFrameworkCore;
 using SharedKernel.Domain;
+using SharedKernel.Domain.Contracts;
 using SharedKernel.Infrastructure;
+using SharedKernel.Infrastructure.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;

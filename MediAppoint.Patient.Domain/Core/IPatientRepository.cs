@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MediAppoint.Patient.Domain.Core
 {
-    public interface IPatientRepository:IRepository<Patient,PatientId>
+    public interface IPatientRepository:IRepository<MediAppoint.Patient.Domain.Core.Patient, PatientId>
     {
     }
 }
