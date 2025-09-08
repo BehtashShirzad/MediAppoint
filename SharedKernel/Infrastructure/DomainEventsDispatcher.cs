@@ -1,6 +1,4 @@
-﻿
-using MassTransit.Configuration;
-using MediAppoint.Patient.Application;
+﻿ 
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using SharedKernel.Domain;
@@ -9,18 +7,19 @@ using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MediAppoint.Patient.Infrastructure
+namespace SharedKernel.Infrastructure
 {
     internal sealed class DomainEventsDispatcher(
       IServiceProvider serviceProvider,
       IDomainEventHandlersFactory domainEventHandlersFactory
   ) : IDomainEventsDispatcher
     {
-        public async Task DispatchAsync(IEnumerable<IDomainEvent> domainEvents, CancellationToken cancellationToken = default)
+        public async Task DispatchAsync(IEnumerable<IDomainEvent> domainEvents,Assembly assembly, CancellationToken cancellationToken = default)
         {
             using var scope = serviceProvider.CreateScope(); // <-- ایجاد scope
             var scopedProvider = scope.ServiceProvider;
@@ -31,7 +30,7 @@ namespace MediAppoint.Patient.Infrastructure
                 var handlers = domainEventHandlersFactory.GetHandlers(
                     domainEvent.GetType(),
                     scopedProvider,
-                    ApplicationAssemblyReference.Assembly
+                    assembly
                 );
 
                 foreach (var handler in handlers)

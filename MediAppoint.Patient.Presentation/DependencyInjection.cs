@@ -13,6 +13,7 @@ namespace MediAppoint.Patient.Presentation
         public static void AddPatientPresentationServices(this IServiceCollection services)
         {
           services.AddFastEndpoints();
+
         }
     }
 }

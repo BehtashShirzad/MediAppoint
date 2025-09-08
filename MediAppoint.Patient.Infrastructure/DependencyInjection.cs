@@ -41,7 +41,7 @@ namespace MediAppoint.Patient.Infrastructure
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IPatientRepository, PatientRepository>();
             services.AddScoped<IPatientQueryRepository, QuerySqlRepository>();
-            services.AddTransient<IDomainEventsDispatcher, DomainEventsDispatcher>();
+           
             services.AddSingleton<IEventBus, EventBus>();
             
             services.AddMassTransit(x =>

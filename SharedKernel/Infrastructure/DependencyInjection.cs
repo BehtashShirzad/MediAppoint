@@ -15,6 +15,7 @@ namespace SharedKernel.Infrastructure
         public static void AddInfrastructureServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddTransient<IIdGenerator<Guid>, GuidGenerator>();
+            services.AddTransient<IDomainEventsDispatcher, DomainEventsDispatcher>();
         }
     }
 }

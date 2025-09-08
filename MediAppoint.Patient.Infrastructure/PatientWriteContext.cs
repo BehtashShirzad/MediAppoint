@@ -2,9 +2,11 @@
  
 using Microsoft.EntityFrameworkCore;
 using SharedKernel.Domain;
+using SharedKernel.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Net.Mime.MediaTypeNames;
@@ -53,7 +55,7 @@ namespace MediAppoint.Patient.Infrastructure
 
             domainEntities.ForEach(e => e.ClearEvents());
 
-            await domainEventsDispatcher.DispatchAsync(domainEvents);
+            await domainEventsDispatcher.DispatchAsync(domainEvents,Application.ApplicationAssemblyReference.Assembly);
         }
     }
 }
