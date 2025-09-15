@@ -24,6 +24,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doctors", "Doctors", "{72AD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediAppoint.Doctor.Host", "MediAppoint.Doctor.Host\MediAppoint.Doctor.Host.csproj", "{092607AF-785F-400B-811E-35D5C160EDB3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediAppoint.Doctor.Presentation", "MediAppoint.Doctor.Presentation\MediAppoint.Doctor.Presentation.csproj", "{8E03C1FC-8F34-4032-B149-F767E6367156}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediAppoint.Doctor.Application", "MediAppoint.Doctor.Application\MediAppoint.Doctor.Application.csproj", "{BFE49833-A06C-4F28-9C19-1F7153A75F8A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,6 +62,14 @@ Global
 		{092607AF-785F-400B-811E-35D5C160EDB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{092607AF-785F-400B-811E-35D5C160EDB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{092607AF-785F-400B-811E-35D5C160EDB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E03C1FC-8F34-4032-B149-F767E6367156}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E03C1FC-8F34-4032-B149-F767E6367156}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E03C1FC-8F34-4032-B149-F767E6367156}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E03C1FC-8F34-4032-B149-F767E6367156}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFE49833-A06C-4F28-9C19-1F7153A75F8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFE49833-A06C-4F28-9C19-1F7153A75F8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFE49833-A06C-4F28-9C19-1F7153A75F8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFE49833-A06C-4F28-9C19-1F7153A75F8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +81,8 @@ Global
 		{50839154-4C0C-453E-AC7C-38197C5853D1} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{131E3D18-5DA0-40D3-905B-A6AD11C46F83} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{092607AF-785F-400B-811E-35D5C160EDB3} = {72ADC0CF-4096-447F-BA3A-C4F6F6A2C404}
+		{8E03C1FC-8F34-4032-B149-F767E6367156} = {72ADC0CF-4096-447F-BA3A-C4F6F6A2C404}
+		{BFE49833-A06C-4F28-9C19-1F7153A75F8A} = {72ADC0CF-4096-447F-BA3A-C4F6F6A2C404}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {83B53E7C-A7EE-4ABB-9D43-D49341F9DFD3}
