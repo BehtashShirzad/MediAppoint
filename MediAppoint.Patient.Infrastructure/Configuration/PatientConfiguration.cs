@@ -1,6 +1,7 @@
 ﻿using MediAppoint.Patient.Domain.ValueObjects;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using SharedKernel.Domain.ValueObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +30,7 @@ namespace MediAppoint.Patient.Infrastructure.Configuration
             {
                 name.Property(n => n.Value)
                     .HasColumnName("Name")
-                    .HasMaxLength(PatientName.MaxLength)
+                    .HasMaxLength(Name.MaxLength)
                     .IsRequired();
             });
 

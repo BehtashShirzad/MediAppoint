@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MediAppoint.Patient.Domain.ValueObjects
+namespace SharedKernel.Domain.ValueObjects
 {
     public class NationalCode : ValueObject
     {

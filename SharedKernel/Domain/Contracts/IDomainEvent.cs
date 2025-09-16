@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SharedKernel.Domain.Contracts
 {
-    public interface IDomainEvent
+    public interface IDomainEvent 
     {
         Guid Id { get; }
         DateTime OccurredOn { get; }

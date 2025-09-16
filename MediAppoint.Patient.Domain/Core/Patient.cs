@@ -2,6 +2,7 @@
 using MediAppoint.Patient.Domain.Events;
 using MediAppoint.Patient.Domain.ValueObjects;
 using SharedKernel.Domain;
+using SharedKernel.Domain.ValueObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,7 @@ namespace MediAppoint.Patient.Domain.Core
     {
         #region Constructor
         protected Patient() { }
-        private  Patient(PatientId patientId,string UserName, PatientName name, List<Address> address, NationalCode natioanlCode)
+        private  Patient(PatientId patientId,string UserName, Name name, List<Address> address, NationalCode natioanlCode)
         {
             this.Id = patientId;
             this.Name = name;
@@ -26,7 +27,7 @@ namespace MediAppoint.Patient.Domain.Core
         #endregion Constructor
 
         #region Fields
-        public   PatientName Name { get;private set; }
+        public   Name Name { get;private set; }
         public   string UserName { get;private set; }
         private readonly List<Address> _addresses = new();
         public IReadOnlyCollection<Address> Addresses => _addresses.AsReadOnly();
@@ -37,7 +38,7 @@ namespace MediAppoint.Patient.Domain.Core
         public static Patient Create(PatientId patientId,string UserName, string name,string natioanlCode, List<Address>  address)
         {
 
-           var patientName = PatientName.Create(name);
+           var patientName = Name.Create(name);
           
             var code = NationalCode.Create(natioanlCode);
             var patient =  new Patient(patientId, UserName, patientName, address, code);
@@ -55,7 +56,7 @@ namespace MediAppoint.Patient.Domain.Core
 
         public void UpdateFullName(string name)
         {
-            var patientName = PatientName.Create(name);
+            var patientName = Name.Create(name);
                    
            Name= patientName;
         }

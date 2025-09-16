@@ -7,21 +7,18 @@ using System.Threading.Tasks;
 
 namespace SharedKernel.Domain
 {
-    public abstract record DomainEvent : IDomainEvent
+    public abstract record DomainEvent  : IDomainEvent 
     {
-        public Guid Id { get; }
+        public  Guid  Id { get; }
         public DateTime OccurredOn { get; }
 
-        protected DomainEvent()
-        {
-            Id = Guid.NewGuid();
-            OccurredOn = DateTime.UtcNow;
+        protected DomainEvent() { 
+        Id = Guid.NewGuid();
         }
-
-        protected DomainEvent(Guid id, DateTime occurredOnUtc)
+        protected DomainEvent(Guid id )
         {
             Id = id;
-            OccurredOn = occurredOnUtc;
+            OccurredOn = DateTime.UtcNow;
         }
     }
 }
