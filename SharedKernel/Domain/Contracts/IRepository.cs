@@ -17,4 +17,14 @@ namespace SharedKernel.Domain.Contracts
         Task DeleteAsync(TEntity entity);
         Task<IReadOnlyCollection<TEntity>> FindAsync(Expression<Func<TEntity, bool>> predicate);
     }
+
+
+    public interface IReadRepository<TEntity, TId>
+       where TEntity : IEntity<TId>
+       where TId : IEquatable<TId>
+    {
+        Task<TEntity?> GetByIdAsync(TId id);
+           
+        Task<IReadOnlyCollection<TEntity>> FindQueryAsync(Expression<Func<TEntity, bool>> predicate);
+    }
 }

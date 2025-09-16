@@ -1,0 +1,2 @@
+dotnet ef migrations add AddDoctorTable  --project MediAppoint.Doctor.Infrastructure  --startup-project MediAppoint.Doctor.Host  -c DoctorWriteDbContext
+dotnet ef database update --project MediAppoint.Doctor.Infrastructure  --startup-project MediAppoint.Doctor.Host  -c DoctorWriteDbContext

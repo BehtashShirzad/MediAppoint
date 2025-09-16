@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace MediAppoint.Doctor.Application.Commands.CreateDoctor
 {
-    public record CreateDoctorCommand(string FullName, string UserName, string NationalCode, List<AddressModel> Addresses) :IRequest<Result<CreateDoctorCommandResponse>>;
+    public record CreateDoctorCommand(string FullName, string UserName, string NationalCode, List<AddressModel> Addresses, string  Degree)
+        :IRequest<Result<CreateDoctorCommandResponse>>;
     public record AddressModel(string Country, string StateCode, string StateName, string City, string Address1, string Address2, string ZipCode);
 }

@@ -54,4 +54,32 @@ namespace SharedKernel.Infrastructure
             return await set.Where(predicate).ToListAsync();
         }
     }
+
+
+    public abstract class SqlReadRepository<TEntity, TId> : IReadRepository<TEntity, TId>
+  where TEntity : SharedKernel.Domain.Entity<TId>
+  where TId : IEquatable<TId>
+    {
+        protected readonly DbContext context;
+        protected readonly DbSet<TEntity> set;
+
+        public SqlReadRepository(DbContext context)
+        {
+            this.context = context;
+            set = context.Set<TEntity>();
+        }
+
+        public virtual async Task<TEntity?> GetByIdAsync(TId id)
+        {
+            return await set.FindAsync(id);
+        }
+
+         
+        public async Task<IReadOnlyCollection<TEntity>> FindQueryAsync(
+            Expression<Func<TEntity, bool>> predicate
+        )
+        {
+            return await set.Where(predicate).ToListAsync();
+        }
+    }
 }

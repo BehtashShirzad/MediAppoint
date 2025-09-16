@@ -1,4 +1,7 @@
 using Carter;
+using MediAppoint.Doctor.Application;
+using MediAppoint.Doctor.Infrastructure;
+using MediAppoint.Doctor.Presentation;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +10,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddCarter();
+builder.Services.AddDoctorApplicationServices();
+builder.Services.AddDoctorInfrastructureServices(builder.Configuration);
+builder.Services.AddDoctorPresentationServices();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

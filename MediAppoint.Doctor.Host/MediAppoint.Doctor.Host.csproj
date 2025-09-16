@@ -17,6 +17,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MediAppoint.Doctor.Infrastructure\MediAppoint.Doctor.Infrastructure.csproj" />
     <ProjectReference Include="..\MediAppoint.Doctor.Presentation\MediAppoint.Doctor.Presentation.csproj" />
   </ItemGroup>
 

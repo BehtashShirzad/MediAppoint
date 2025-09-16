@@ -9,7 +9,7 @@ namespace MediAppoint.Doctor.Presentation
 {
     public static class DependencyInjection
     {
-        public static void AddDoctorPresentationServices(IServiceCollection services)
+        public static void AddDoctorPresentationServices(this IServiceCollection services)
         {
             
 

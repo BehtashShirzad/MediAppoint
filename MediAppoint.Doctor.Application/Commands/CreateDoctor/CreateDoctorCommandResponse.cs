@@ -6,6 +6,6 @@ using System.Threading.Tasks;
 
 namespace MediAppoint.Doctor.Application.Commands.CreateDoctor
 {
-    public record CreateDoctorCommandResponse();
+    public record CreateDoctorCommandResponse(Guid DoctorId);
     
 }
