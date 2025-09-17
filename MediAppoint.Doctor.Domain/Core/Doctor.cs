@@ -18,6 +18,7 @@ namespace MediAppoint.Doctor.Domain.Core
         protected Doctor() { }
         private Doctor(DoctorId Id,string username,Name name,List<Address> address,NationalCode nationalCode, Degree degree) 
         {
+            base.Id = Id;
             Name = name;
             UserName = username;
             _addresses = address ?? new List<Address>();
@@ -38,12 +39,12 @@ namespace MediAppoint.Doctor.Domain.Core
 
         public static Doctor Create(DoctorId doctorId, string UserName, string name, string natioanlCode, List<Address> address, string DegreeStr)
         {
-
+            Guard.Against.NullOrEmpty(doctorId.Value);
             Guard.Against.NullOrEmpty(DegreeStr);
             var nameD = Name.Create(name);
             var degreeResult = Degree.FromName<Degree>(DegreeStr);
-            Guard.Against.Expression(_ => degreeResult.IsFailure, degreeResult, degreeResult.Error);
-       
+            if (degreeResult.IsFailure)
+                throw new ArgumentException(degreeResult.Error);
             var code = NationalCode.Create(natioanlCode);
             var doctor = new Doctor(doctorId, UserName, nameD, address, code, degreeResult.Value);
 

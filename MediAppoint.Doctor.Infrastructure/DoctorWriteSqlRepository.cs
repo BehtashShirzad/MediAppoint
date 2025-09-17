@@ -11,7 +11,7 @@ namespace MediAppoint.Doctor.Infrastructure
 {
     internal class DoctorWriteSqlRepository:SqlRepository<Doctor.Domain.Core.Doctor,DoctorId>,IDoctorWriteRepository
     {
-        public DoctorWriteSqlRepository(DoctorReadDbContext context):base(context)
+        public DoctorWriteSqlRepository(DoctorWriteDbContext context):base(context)
         {
             
         }

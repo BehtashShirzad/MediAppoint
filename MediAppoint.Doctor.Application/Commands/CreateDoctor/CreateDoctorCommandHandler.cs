@@ -16,7 +16,7 @@ namespace MediAppoint.Doctor.Application.Commands.CreateDoctor
     {
         public async Task<Result<CreateDoctorCommandResponse>> Handle(CreateDoctorCommand request, CancellationToken cancellationToken)
         {
-            var patiendId = new DoctorId(IdGenerator.Next());
+            var doctorId = new DoctorId(IdGenerator.Next());
 
 
             var addresses = request.Addresses
@@ -29,10 +29,10 @@ namespace MediAppoint.Doctor.Application.Commands.CreateDoctor
              item.ZipCode))
          .ToList();
 
-            var doctor = Domain.Core.Doctor.Create(patiendId, request.UserName, request.FullName, request.NationalCode, addresses,request.Degree);
+            var doctor = Domain.Core.Doctor.Create(doctorId, request.UserName, request.FullName, request.NationalCode, addresses,request.Degree);
             
             await doctorRepository.AddAsync(doctor, cancellationToken);
-            await unitOfWork.SaveChangesAsync(cancellationToken);
+         var ss=   await unitOfWork.SaveChangesAsync(cancellationToken);
             return new CreateDoctorCommandResponse(doctor.Id.Value);
 
         }

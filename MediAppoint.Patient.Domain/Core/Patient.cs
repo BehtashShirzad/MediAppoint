@@ -18,7 +18,7 @@ namespace MediAppoint.Patient.Domain.Core
         protected Patient() { }
         private  Patient(PatientId patientId,string UserName, Name name, List<Address> address, NationalCode natioanlCode)
         {
-            this.Id = patientId;
+            base.Id = patientId;
             this.Name = name;
             _addresses = address ?? new List<Address>();
             this.Code = natioanlCode;

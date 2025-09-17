@@ -10,15 +10,16 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddCarter();
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddDoctorApplicationServices();
 builder.Services.AddDoctorInfrastructureServices(builder.Configuration);
 builder.Services.AddDoctorPresentationServices();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-app.MapCarter();
     app.UseSwagger();
     app.UseSwaggerUI();
+app.MapCarter();
 
 app.UseHttpsRedirection();
 
