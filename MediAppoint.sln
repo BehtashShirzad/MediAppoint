@@ -22,7 +22,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedKernel", "SharedKerne
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doctors", "Doctors", "{72ADC0CF-4096-447F-BA3A-C4F6F6A2C404}"
 	ProjectSection(SolutionItems) = preProject
-		Doctor Db Migrations.txt = Doctor Db Migrations.txt
+		MigrationsCommad.txt = MigrationsCommad.txt
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediAppoint.Doctor.Host", "MediAppoint.Doctor.Host\MediAppoint.Doctor.Host.csproj", "{092607AF-785F-400B-811E-35D5C160EDB3}"
